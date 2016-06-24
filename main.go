@@ -17,6 +17,7 @@ func main() {
 	readFile(*filename, *employeeSerial)
 }
 
+// Define Employee struct
 type Employee struct {
 	Name    string
 	Serial  string
