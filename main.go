@@ -43,14 +43,14 @@ func readFile(filename string, employeeSerial string) {
 	//	Loop through chunks and place them in struct for each employee
 	for i := 0; i < (len(spltStr)); i++ {
 		spltSlice := strings.Split(spltStr[i], ",")
-		studentStruct := Employee{
+		employeeStruct := Employee{
 			Name:    spltSlice[0],
 			Serial:  spltSlice[1],
 			Age:     spltSlice[2],
 			Address: spltSlice[3],
 		}
 		//	Place each struct into map where key is serial and map is record
-		mapOfRecords[spltSlice[1]] = studentStruct
+		mapOfRecords[spltSlice[1]] = employeeStruct
 	}
 	// Prints out record of serial passed as flag from command line
 	fmt.Println("Name: " + mapOfRecords[employeeSerial].Name)
